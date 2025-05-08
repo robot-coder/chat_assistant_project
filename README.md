@@ -1,25 +1,23 @@
-# Chat Assistant
+# Chat Assistant Project
 
-This project implements a Chat Assistant using a front-end JavaScript interface and a back-end Python FastAPI server.
+## Overview
+This project implements a Chat Assistant using FastAPI for the backend and JavaScript for the frontend. The assistant interacts with various Language Learning Models (LLMs) to provide responses to user queries.
 
 ## Requirements
-- Frontend: JavaScript interface
-- Backend: Python FastAPI server
-- Continuous conversation functionality
-- LLM selection
-- File uploads for context
-- Side-by-side LLM comparison
+- FastAPI
+- LiteLLM
+- JavaScript
 
 ## Deployment
-The Chat Assistant will be deployed on Render.com.
-
-## API Key
-An OpenRouter.ai API Key will be created for the project.
+The Chat Assistant is deployed on Render.com. You can access it [here](https://your-chat-assistant-url).
 
 ## Extensions
-- Text file uploads
-- Image file uploads
-- Side-by-side LLM response comparison
+- Text file uploads to add to the prompt context.
+- Image file uploads for multimodal LLMs.
+- Side-by-side LLM response comparison.
 
-## Demo
-A demo will be provided during the lecture on Thu Feb 13.
+## Getting Started
+1. Clone the repository.
+2. Install the required dependencies.
+3. Run the FastAPI server.
+4. Open the frontend in your browser.
