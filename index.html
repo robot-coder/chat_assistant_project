@@ -13,16 +13,11 @@
     <button id="send-button">Send</button>
 
     <script>
-        $(document).ready(function() {
-            $('#send-button').click(function() {
-                let userMessage = $('#user-input').val();
-                $('#chat-box').append('<div>User: ' + userMessage + '</div>');
-                $.post('/chat/', { message: userMessage }, function(data) {
-                    $('#chat-box').append('<div>Assistant: ' + data.response + '</div>');
-                }).fail(function() {
-                    $('#chat-box').append('<div>Error: Unable to get response from assistant.</div>');
-                });
-                $('#user-input').val('');
+        $("#send-button").click(function() {
+            const userInput = $("#user-input").val();
+            $.post("/chat/", { user_input: userInput, llm_choice: "your-llm-choice" }, function(data) {
+                $('#chat-box').append('<div>User: ' + userInput + '</div>');
+                $('#chat-box').append('<div>Assistant: ' + data.response + '</div>');
             });
         });
     </script>
