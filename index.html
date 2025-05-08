@@ -19,6 +19,8 @@
                 $('#chat-box').append('<div>User: ' + userMessage + '</div>');
                 $.post('/chat/', { message: userMessage }, function(data) {
                     $('#chat-box').append('<div>Assistant: ' + data.response + '</div>');
+                }).fail(function() {
+                    $('#chat-box').append('<div>Error: Unable to get response from assistant.</div>');
                 });
                 $('#user-input').val('');
             });
